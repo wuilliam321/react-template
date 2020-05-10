@@ -7,12 +7,12 @@ import RomanDisplay from './RomanDisplay';
 describe('RomanDisplay', () => {
     test('Should render a result when valid arabic is given', () => {
         render(<RomanDisplay arabic={1} />);
-        const result = screen.getByTestId('result');
-        expect(result.textContent).toBe('Arabic: 1, Roman: I');
+        const result = screen.getByTestId('roman');
+        expect(result.textContent).toBe('I');
     });
     test('Should render invalid result when invalid arabic is given', () => {
         render(<RomanDisplay arabic={999999} />);
-        const result = screen.getByTestId('result');
-        expect(result.textContent).toBe('Arabic: 999999, Roman: Invalid');
+        const result = screen.getByTestId('roman');
+        expect(result.textContent).toBe('Invalid');
     });
 });  

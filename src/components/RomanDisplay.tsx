@@ -22,7 +22,7 @@ export default function RomanDisplay(props: RomanDisplayProps) {
     return (
         <div>
             <p data-testid='result'>
-                Arabic: {arabic}, Roman: {roman}
+                Arabic: {arabic}, Roman: <span data-testid="roman">{roman}</span>
             </p>
         </div>
     );
