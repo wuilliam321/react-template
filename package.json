@@ -62,7 +62,7 @@
     ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest",
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+      "^.+\\.js$": "babel-jest"
     },
     "moduleNameMapper": {
       "@components/(.*)$": "<rootDir>/src/components/$1",
