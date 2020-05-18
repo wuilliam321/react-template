@@ -5,9 +5,9 @@ import React from 'react';
 import App from './App';
 
 describe('App', () => {
-    test('Should render index component', () => {
+    test('it should render index component', () => {
         render(<App />);
-        const result = screen.getByTestId('title');
-        expect(result).toHaveTextContent('Hello, world!');
+        const result = screen.getByText('React Template');
+        expect(result).toBeInTheDocument();
     });
 });  

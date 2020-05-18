@@ -1,10 +1,11 @@
 import React from 'react';
-import Romans from './Romans';
+import Greeting from '@pages/Greeting';
+
 
 export default function App() {
 
     return <div>
-        <h1 data-testid="title">Hello, world!</h1>
-        <Romans />
+        <h1>React Template</h1>
+        <Greeting />
     </div>;
 }

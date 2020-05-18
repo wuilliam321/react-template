@@ -34,6 +34,7 @@ const settings = {
   aliases: {
     '@components': 'src/components',
     '@pages': 'src/pages',
+    '@core': 'src/core',
     // '@styles': 'src/styles',
     '@static': 'src/static',
   },
