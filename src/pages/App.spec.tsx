@@ -7,6 +7,7 @@ import App from './App';
 describe('App', () => {
     test('Should render index component', () => {
         render(<App />);
-        expect(screen.getByTestId('title').textContent).toBe('Hello, world!');
+        const result = screen.getByTestId('title');
+        expect(result).toHaveTextContent('Hello, world!');
     });
 });  

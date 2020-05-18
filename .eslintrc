@@ -23,12 +23,21 @@
         "vars": "all",
         "args": "none"
       }
-    ]
+    ],
+    "jest-dom/prefer-checked": "error",
+    "jest-dom/prefer-enabled-disabled": "error",
+    "jest-dom/prefer-required": "error",
+    "jest-dom/prefer-to-have-attribute": "error",
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "warn"
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/recommended"
   ]
 }
