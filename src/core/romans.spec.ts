@@ -23,6 +23,7 @@ const conversions: [number, string][] = [
     [0, ''],
     [3424, 'MMMCDXXIV'],
 ];
+
 describe('convert arabic to romans', () => {
     conversions.map(([arabic, roman]) => {
         it(`convert ${arabic} to ${roman}`, () => {
@@ -37,17 +38,13 @@ describe('convert arabic to romans', () => {
 
 const invalidValues: [number, string][] = [
     [5001, 'arabic should be <= 5000'],
-    // [undefined, 'number is required'],
-    // [null, 'number is required'],
-    // [{}, 'number is required'],
-    // [() => ({}), 'number is required'],
-    // ['A bad param', 'number is required'],
-    // ['999', 'number is required'],
 ];
+
 describe('convert out of limits', () => {
     // Roman domain: arabic > 0 AND N <= 5000
     // Limits: <= 0, > 5000
     invalidValues.map(([invalid, msg]) => {
+
         it(`convert with '${invalid}' value`, () => {
             const param = invalid;
             const error = new Error(msg);
@@ -56,5 +53,6 @@ describe('convert out of limits', () => {
 
             expect(runner).toThrow(error);
         });
+
     });
 });

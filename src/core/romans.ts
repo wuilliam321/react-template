@@ -32,6 +32,7 @@ export function convert (number: number) {
     if (!conversion || number <= 0) {
         return '';
     }
+
     const arabic = conversion[0];
     let roman = conversion[1];
     roman += convert(number - arabic);
