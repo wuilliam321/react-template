@@ -16,8 +16,10 @@ const conversions: [number, string][] = [
 ];
 
 function validateNumber (number: number) {
-    if (number > 5000) {
-        throw new Error('arabic should be <= 5000');
+    const [maxConvertion] = conversions;
+    const [maxArabic] = maxConvertion;
+    if (number > maxArabic) {
+        throw new Error(`arabic should be <= ${maxArabic}`);
     }
 }
 
